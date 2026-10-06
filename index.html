@@ -309,6 +309,20 @@
       .schedule-heading h2 { font-size: 30px; margin: 0 0 7px; }
       .schedule-heading p { color: var(--text); font-size: 15px; margin: 0; }
       .schedule-card .calendly-inline-widget { width: 100%; min-width: 320px; height: 700px; }
+      .schedule-mobile-cta { display: none; }
+      .schedule-mobile-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        padding: 0 26px;
+        border-radius: 8px;
+        background: var(--green);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .schedule-mobile-button:hover { filter: brightness(0.96); }
 
       .contact {
         padding: 48px 0 58px;
@@ -612,6 +626,29 @@
         .location-map {
           min-height: 360px;
         }
+
+        /* Keep Calendly's desktop embed off phones. Its internal Google Meet
+           layout can overflow at narrow widths, so phones use the native
+           Calendly booking page instead. */
+        .schedule-section {
+          padding: 34px 0 40px;
+        }
+        .schedule-card {
+          padding: 28px 20px 30px;
+          text-align: center;
+        }
+        .schedule-heading {
+          margin-bottom: 22px;
+        }
+        .schedule-heading h2 {
+          font-size: 28px;
+        }
+        .schedule-card .calendly-inline-widget {
+          display: none !important;
+        }
+        .schedule-mobile-cta {
+          display: block;
+        }
       }
     </style>
   </head>
@@ -832,10 +869,14 @@
               <h2>Schedule a Call</h2>
               <p>Book a convenient time to connect with OakRise Point.</p>
             </div>
-            <!-- Calendly inline widget begin -->
+            <!-- Calendly inline widget: desktop/tablet -->
             <div class="calendly-inline-widget" data-url="https://calendly.com/oakrisepoint/schedule?background_color=faf7f0&text_color=123b5d&primary_color=087f68" style="min-width:320px;height:700px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
+
+            <!-- Mobile: open Calendly's own responsive booking page -->
+            <div class="schedule-mobile-cta">
+              <a class="schedule-mobile-button" href="https://calendly.com/oakrisepoint/schedule" target="_blank" rel="noopener noreferrer">Schedule a Call</a>
+            </div>
           </div>
         </div>
       </section>
