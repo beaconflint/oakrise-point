@@ -292,6 +292,24 @@
         margin-top: 9px !important;
         min-height: 17px;
       }
+      /* Schedule a Call */
+      .schedule-section {
+        padding: 48px 0 58px;
+        background: var(--pearl2);
+        scroll-margin-top: 90px;
+      }
+      .schedule-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 30px;
+        overflow: hidden;
+      }
+      .schedule-heading { text-align: center; margin-bottom: 20px; }
+      .schedule-heading h2 { font-size: 30px; margin: 0 0 7px; }
+      .schedule-heading p { color: var(--text); font-size: 15px; margin: 0; }
+      .schedule-card .calendly-inline-widget { width: 100%; min-width: 320px; height: 700px; }
+
       .contact {
         padding: 48px 0 58px;
         background: var(--pearl);
@@ -389,6 +407,7 @@
       }
       #home-target,
       #about,
+      #schedule,
       #contact {
         scroll-margin-top: 90px;
       }
@@ -803,6 +822,20 @@
               </button>
               <p class="note" id="employer-status" aria-live="polite"></p>
             </form>
+          </div>
+        </div>
+      </section>
+      <section class="schedule-section" id="schedule">
+        <div class="wrap">
+          <div class="schedule-card">
+            <div class="schedule-heading">
+              <h2>Schedule a Call</h2>
+              <p>Book a convenient time to connect with OakRise Point.</p>
+            </div>
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/oakrisepoint/schedule?background_color=faf7f0&text_color=123b5d&primary_color=087f68" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
           </div>
         </div>
       </section>
