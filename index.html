@@ -294,7 +294,7 @@
       }
       /* Schedule a Call */
       .schedule-section {
-        padding: 48px 0 58px;
+        padding: 24px 0 28px;
         background: var(--pearl2);
         scroll-margin-top: 90px;
       }
@@ -302,15 +302,20 @@
         background: var(--card);
         border: 1px solid var(--line);
         border-radius: 12px;
-        padding: 22px 18px 18px;
+        padding: 14px 12px 10px;
         overflow: hidden;
-        max-width: 1000px;
+        max-width: 840px;
         margin: 0 auto;
       }
-      .schedule-heading { text-align: center; margin-bottom: 8px; }
+      .schedule-heading { text-align: center; margin-bottom: 0; }
       .schedule-heading h2 { font-size: 30px; margin: 0 0 5px; }
       .schedule-heading p { color: var(--text); font-size: 15px; margin: 0; }
-      .schedule-card .calendly-inline-widget { width: 100%; min-width: 320px; height: 600px; }
+      .schedule-card .calendly-inline-widget { width: 100%; min-width: 320px; height: 600px; margin-top: -42px; margin-bottom: -34px; }
+      @media (max-width: 700px) {
+        .schedule-section { padding: 16px 0 20px; }
+        .schedule-card { padding: 12px 6px 8px; }
+        .schedule-card .calendly-inline-widget { height: 900px; margin-top: 0; margin-bottom: 0; }
+      }
 
 
       .contact {
@@ -857,7 +862,7 @@
               <p>Book a convenient time to connect with OakRise Point.</p>
             </div>
             <!-- Calendly inline widget: desktop, tablet, and mobile -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/oakrisepoint/schedule?background_color=faf7f0&text_color=123b5d&primary_color=087f68" style="min-width:320px;height:700px;"></div>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/oakrisepoint/schedule?background_color=faf7f0&text_color=123b5d&primary_color=087f68" style="min-width:320px;height:600px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
           </div>
