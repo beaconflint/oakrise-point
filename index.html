@@ -321,6 +321,11 @@
       .schedule-heading h2 { font-size: 30px; margin: 0 0 5px; }
       .schedule-heading p { color: var(--text); font-size: 15px; margin: 0; }
       .schedule-card .calendly-inline-widget { width: 100%; min-width: 320px; height: 700px !important; overflow: hidden !important; }
+      .calendly-wrapper { position: relative; }
+      .calendly-privacy-mask { position: absolute; bottom: 0; left: 0; width: 175px; height: 46px; background: #faf7f0; z-index: 2; }
+      .calendly-privacy-link { position: absolute; left: 30px; bottom: 25px; z-index: 3; color: #087c65; font-size: 13px; text-decoration: none; }
+      .calendly-privacy-link:hover { text-decoration: underline; }
+
       @media (max-width: 700px) {
         .schedule-section { padding: 14px 0 18px; }
         .schedule-section > .wrap { width: calc(100% - 20px); }
@@ -874,7 +879,11 @@
               <p>Book a convenient time to connect with OakRise Point.</p>
             </div>
             <!-- Calendly inline widget: desktop, tablet, and mobile -->
+            <div class="calendly-wrapper">
             <div class="calendly-inline-widget" data-url="https://calendly.com/oakrisepoint/schedule?background_color=faf7f0&text_color=123b5d&primary_color=087f68&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+              <div class="calendly-privacy-mask" aria-hidden="true"></div>
+              <a class="calendly-privacy-link" href="https://calendly.com/legal/privacy-notice" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            </div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
           </div>
